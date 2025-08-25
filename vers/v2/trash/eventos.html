@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Olimpiadas Especiales Chile</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://olimpiadasespecialeschile.net/favicon.png">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <!-- Sidebar Overlay for Mobile -->
+    <div id="sidebarOverlay" class="sidebar-overlay"></div>
+    
+    <!-- Sidebar -->
+    <nav id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-brand">
+                <img src="https://poe.olimpiadasespecialeschile.net/static/img/logoPoe2.png" style="height: 150px; vertical-align: middle;">
+            </div>
+            <button class="sidebar-toggle d-lg-none" id="sidebarToggle">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="sidebar-menu">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="fas fa-home"></i>
+                        <span>Página de inicio</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="informacion.html">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Información</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="talleres.html">
+                        <i class="fas fa-tools"></i>
+                        <span>Talleres</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="eventos.html">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Eventos</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="capacitaciones.html">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Capacitaciones</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="actividades.html">
+                        <i class="fas fa-clipboard-list"></i>
+                        <span>Registro de actividades</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="descargas.html">
+                        <i class="fas fa-download"></i>
+                        <span>Material descargable</span>
+                    </a>
+                </li>
+                <li class="nav-item mt-auto">
+                    <a class="nav-link" href="configuracion.html">
+                        <i class="fas fa-cog"></i>
+                        <span>Configuración</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <div class="user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-details">
+                    <div class="user-name">Usuario Admin</div>
+                    <div class="user-role">Administrador</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Top Navigation -->
+        <header class="top-navbar">
+            <div class="navbar-content">
+                <button class="sidebar-toggle d-lg-none" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div class="navbar-search">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Buscar eventos...">
+                    </div>
+                </div>
+                
+                <div class="navbar-actions">
+                    <button class="btn btn-primary btn-sm">
+                        <i class="fas fa-plus"></i>
+                        Nuevo Evento
+                    </button>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Content Area -->
+        <main class="content-area">
+            <div class="content-header">
+                <h1 class="page-title">Eventos</h1>
+                <p class="page-subtitle">Calendario de competencias, actividades y celebraciones</p>
+            </div>
+            
+            <!-- Calendar View Toggle -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-outline-primary active">
+                            <i class="fas fa-list me-2"></i>Vista de Lista
+                        </button>
+                        <button type="button" class="btn btn-outline-primary">
+                            <i class="fas fa-calendar me-2"></i>Vista de Calendario
+                        </button>
+                        <button type="button" class="btn btn-outline-primary">
+                            <i class="fas fa-table me-2"></i>Vista de Agenda
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Upcoming Events -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h4 class="section-title">Próximos Eventos</h4>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Evento 1 -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card event-card border-start border-primary border-4">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div class="event-date">
+                                    <div class="date-box bg-primary text-white">
+                                        <div class="date-day">15</div>
+                                        <div class="date-month">AGO</div>
+                                    </div>
+                                </div>
+                                <span class="badge bg-primary">Competencia</span>
+                            </div>
+                            
+                            <h5 class="card-title">
+                                <i class="fas fa-swimming-pool text-primary me-2"></i>
+                                Torneo Nacional de Natación
+                            </h5>
+                            
+                            <p class="card-text text-muted">
+                                Competencia nacional de natación con participación de atletas de todas las regiones del país.
+                            </p>
+                            
+                            <div class="event-details">
+                                <div class="detail-row">
+                                    <i class="fas fa-clock text-muted me-2"></i>
+                                    <span>09:00 - 17:00</span>
+                                </div>
+                                <div class="detail-row">
+                                    <i class="fas fa-map-marker-alt text-muted me-2"></i>
+                                    <span>Centro Acuático Nacional, Santiago</span>
+                                </div>
+                                <div class="detail-row">
+                                    <i class="fas fa-users text-muted me-2"></i>
+                                    <span>120 atletas registrados</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-3">
+                                <button class="btn btn-outline-primary btn-sm me-2">
+                                    <i class="fas fa-eye"></i> Ver Detalles
+                                </button>
+                                <button class="btn btn-outline-success btn-sm">
+                                    <i class="fas fa-users"></i> Participantes
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Evento 2 -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card event-card border-start border-success border-4">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div class="event-date">
+                                    <div class="date-box bg-success text-white">
+                                        <div class="date-day">22</div>
+                                        <div class="date-month">AGO</div>
+                                    </div>
+                                </div>
+                                <span class="badge bg-success">Festival</span>
+                            </div>
+                            
+                            <h5 class="card-title">
+                                <i class="fas fa-music text-success me-2"></i>
+                                Festival de Talentos Inclusivos
+                            </h5>
+                            
+                            <p class="card-text text-muted">
+                                Celebración de habilidades artísticas y talentos especiales de nuestros atletas.
+                            </p>
+                            
+                            <div class="event-details">
+                                <div class="detail-row">
+                                    <i class="fas fa-clock text-muted me-2"></i>
+                                    <span>18:00 - 21:00</span>
+                                </div>
+                                <div class="detail-row">
+                                    <i class="fas fa-map-marker-alt text-muted me-2"></i>
+                                    <span>Teatro Municipal, Valparaíso</span>
+                                </div>
+                                <div class="detail-row">
+                                    <i class="fas fa-users text-muted me-2"></i>
+                                    <span>45 participantes</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-3">
+                                <button class="btn btn-outline-primary btn-sm me-2">
+                                    <i class="fas fa-eye"></i> Ver Detalles
+                                </button>
+                                <button class="btn btn-outline-success btn-sm">
+                                    <i class="fas fa-users"></i> Participantes
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Evento 3 -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card event-card border-start border-warning border-4">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div class="event-date">
+                                    <div class="date-box bg-warning text-dark">
+                                        <div class="date-day">03</div>
+                                        <div class="date-month">SEP</div>
+                                    </div>
+                                </div>
+                                <span class="badge bg-warning text-dark">Capacitación</span>
+                            </div>
+                            
+                            <h5 class="card-title">
+                                <i class="fas fa-chalkboard-teacher text-warning me-2"></i>
+                                Taller de Entrenadores
+                            </h5>
+                            
+                            <p class="card-text text-muted">
+                                Capacitación especializada para entrenadores y voluntarios en metodologías inclusivas.
+                            </p>
+                            
+                            <div class="event-details">
+                                <div class="detail-row">
+                                    <i class="fas fa-clock text-muted me-2"></i>
+                                    <span>09:00 - 18:00</span>
+                                </div>
+                                <div class="detail-row">
+                                    <i class="fas fa-map-marker-alt text-muted me-2"></i>
+                                    <span>Sede Central, Santiago</span>
+                                </div>
+                                <div class="detail-row">
+                                    <i class="fas fa-users text-muted me-2"></i>
+                                    <span>30 entrenadores</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-3">
+                                <button class="btn btn-outline-primary btn-sm me-2">
+                                    <i class="fas fa-eye"></i> Ver Detalles
+                                </button>
+                                <button class="btn btn-outline-success btn-sm">
+                                    <i class="fas fa-users"></i> Participantes
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Evento 4 -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card event-card border-start border-info border-4">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div class="event-date">
+                                    <div class="date-box bg-info text-white">
+                                        <div class="date-day">10</div>
+                                        <div class="date-month">SEP</div>
+                                    </div>
+                                </div>
+                                <span class="badge bg-info">Reunión</span>
+                            </div>
+                            
+                            <h5 class="card-title">
+                                <i class="fas fa-handshake text-info me-2"></i>
+                                Encuentro de Familias
+                            </h5>
+                            
+                            <p class="card-text text-muted">
+                                Jornada de integración y actividades recreativas para familias de atletas.
+                            </p>
+                            
+                            <div class="event-details">
+                                <div class="detail-row">
+                                    <i class="fas fa-clock text-muted me-2"></i>
+                                    <span>10:00 - 16:00</span>
+                                </div>
+                                <div class="detail-row">
+                                    <i class="fas fa-map-marker-alt text-muted me-2"></i>
+                                    <span>Parque O'Higgins, Santiago</span>
+                                </div>
+                                <div class="detail-row">
+                                    <i class="fas fa-users text-muted me-2"></i>
+                                    <span>200 familias esperadas</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-3">
+                                <button class="btn btn-outline-primary btn-sm me-2">
+                                    <i class="fas fa-eye"></i> Ver Detalles
+                                </button>
+                                <button class="btn btn-outline-success btn-sm">
+                                    <i class="fas fa-users"></i> Participantes
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Events Statistics -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h4 class="section-title">Estadísticas de Eventos</h4>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-primary">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>24</h3>
+                            <p>Eventos este Mes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-success">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>8</h3>
+                            <p>Competencias</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-warning">
+                            <i class="fas fa-user-friends"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>1,240</h3>
+                            <p>Total Participantes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-info">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>15</h3>
+                            <p>Regiones Participantes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recent Events -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">
+                                <i class="fas fa-history me-2"></i>
+                                Eventos Recientes
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="recent-event-item">
+                                <div class="event-icon bg-success">
+                                    <i class="fas fa-medal"></i>
+                                </div>
+                                <div class="event-content">
+                                    <h6>Ceremonia de Premiación Regional</h6>
+                                    <p class="text-muted mb-1">Reconocimiento a atletas destacados de la región metropolitana</p>
+                                    <small class="text-muted">
+                                        <i class="fas fa-calendar me-1"></i>5 de Agosto, 2024
+                                        <i class="fas fa-map-marker-alt ms-3 me-1"></i>Santiago
+                                    </small>
+                                </div>
+                                <div class="event-status">
+                                    <span class="badge bg-success">Completado</span>
+                                </div>
+                            </div>
+                            
+                            <div class="recent-event-item">
+                                <div class="event-icon bg-primary">
+                                    <i class="fas fa-running"></i>
+                                </div>
+                                <div class="event-content">
+                                    <h6>Maratón Inclusiva de Verano</h6>
+                                    <p class="text-muted mb-1">Competencia de atletismo con participación nacional</p>
+                                    <small class="text-muted">
+                                        <i class="fas fa-calendar me-1"></i>28 de Julio, 2024
+                                        <i class="fas fa-map-marker-alt ms-3 me-1"></i>Viña del Mar
+                                    </small>
+                                </div>
+                                <div class="event-status">
+                                    <span class="badge bg-success">Completado</span>
+                                </div>
+                            </div>
+                            
+                            <div class="recent-event-item">
+                                <div class="event-icon bg-info">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div class="event-content">
+                                    <h6>Seminario de Inclusión Deportiva</h6>
+                                    <p class="text-muted mb-1">Capacitación para profesionales del deporte adaptado</p>
+                                    <small class="text-muted">
+                                        <i class="fas fa-calendar me-1"></i>20 de Julio, 2024
+                                        <i class="fas fa-map-marker-alt ms-3 me-1"></i>Concepción
+                                    </small>
+                                </div>
+                                <div class="event-status">
+                                    <span class="badge bg-success">Completado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+    </div>
+    
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="static/js/main.js"></script>
+</body>
+</html>

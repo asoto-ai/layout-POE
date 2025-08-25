@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talleres - Olimpiadas Especiales Chile</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://olimpiadasespecialeschile.net/favicon.png">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <!-- Sidebar Overlay for Mobile -->
+    <div id="sidebarOverlay" class="sidebar-overlay"></div>
+    
+    <!-- Sidebar -->
+    <nav id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-brand">
+                <img src="https://poe.olimpiadasespecialeschile.net/static/img/logoPoe2.png" style="height: 150px; vertical-align: middle;">
+            </div>
+            <button class="sidebar-toggle d-lg-none" id="sidebarToggle">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="sidebar-menu">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="fas fa-home"></i>
+                        <span>Página de inicio</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="informacion.html">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Información</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="talleres.html">
+                        <i class="fas fa-tools"></i>
+                        <span>Talleres</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="eventos.html">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Eventos</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="capacitaciones.html">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Capacitaciones</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="actividades.html">
+                        <i class="fas fa-clipboard-list"></i>
+                        <span>Registro de actividades</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="descargas.html">
+                        <i class="fas fa-download"></i>
+                        <span>Material descargable</span>
+                    </a>
+                </li>
+                <li class="nav-item mt-auto">
+                    <a class="nav-link" href="configuracion.html">
+                        <i class="fas fa-cog"></i>
+                        <span>Configuración</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <div class="user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-details">
+                    <div class="user-name">Usuario Admin</div>
+                    <div class="user-role">Administrador</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Top Navigation -->
+        <header class="top-navbar">
+            <div class="navbar-content">
+                <button class="sidebar-toggle d-lg-none" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div class="navbar-search">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Buscar talleres...">
+                    </div>
+                </div>
+                
+                <div class="navbar-actions">
+                    <button class="btn btn-primary btn-sm">
+                        <i class="fas fa-plus"></i>
+                        Nuevo Taller
+                    </button>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Content Area -->
+        <main class="content-area">
+            <div class="content-header">
+                <h1 class="page-title">Talleres</h1>
+                <p class="page-subtitle">Programas de desarrollo de habilidades deportivas y sociales</p>
+            </div>
+            
+            <!-- Filter Tabs -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <ul class="nav nav-pills" id="taller-tabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#todos">
+                                <i class="fas fa-list me-2"></i>Todos los Talleres
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#deportivos">
+                                <i class="fas fa-running me-2"></i>Deportivos
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#artisticos">
+                                <i class="fas fa-palette me-2"></i>Artísticos
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" data-bs-toggle="pill" data-bs-target="#sociales">
+                                <i class="fas fa-users me-2"></i>Habilidades Sociales
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Tab Content -->
+            <div class="tab-content" id="taller-content">
+                <!-- Todos los Talleres -->
+                <div class="tab-pane fade show active" id="todos">
+                    <div class="row">
+                        <!-- Taller 1 -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card taller-card">
+                                <div class="card-header bg-primary text-white">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h6 class="mb-0">
+                                            <i class="fas fa-swimmer me-2"></i>
+                                            Natación Básica
+                                        </h6>
+                                        <span class="badge bg-light text-primary">Activo</span>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Programa de natación adaptada para desarrollar habilidades acuáticas básicas y confianza en el agua.</p>
+                                    
+                                    <div class="taller-info mb-3">
+                                        <div class="info-item">
+                                            <i class="fas fa-calendar text-muted me-2"></i>
+                                            <span>Lunes y Miércoles</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-clock text-muted me-2"></i>
+                                            <span>10:00 - 11:30</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-users text-muted me-2"></i>
+                                            <span>12 participantes</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-user-tie text-muted me-2"></i>
+                                            <span>Coach María González</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="progress mb-3">
+                                        <div class="progress-bar bg-primary" style="width: 75%"></div>
+                                    </div>
+                                    <small class="text-muted">Progreso del programa: 75%</small>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn btn-outline-primary btn-sm me-2">
+                                        <i class="fas fa-eye"></i> Ver Detalles
+                                    </button>
+                                    <button class="btn btn-outline-success btn-sm">
+                                        <i class="fas fa-edit"></i> Editar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Taller 2 -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card taller-card">
+                                <div class="card-header bg-success text-white">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h6 class="mb-0">
+                                            <i class="fas fa-basketball-ball me-2"></i>
+                                            Baloncesto Inclusivo
+                                        </h6>
+                                        <span class="badge bg-light text-success">Activo</span>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Desarrollo de habilidades de baloncesto en un ambiente inclusivo y divertido.</p>
+                                    
+                                    <div class="taller-info mb-3">
+                                        <div class="info-item">
+                                            <i class="fas fa-calendar text-muted me-2"></i>
+                                            <span>Martes y Jueves</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-clock text-muted me-2"></i>
+                                            <span>15:00 - 16:30</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-users text-muted me-2"></i>
+                                            <span>16 participantes</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-user-tie text-muted me-2"></i>
+                                            <span>Coach Carlos Ruiz</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="progress mb-3">
+                                        <div class="progress-bar bg-success" style="width: 60%"></div>
+                                    </div>
+                                    <small class="text-muted">Progreso del programa: 60%</small>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn btn-outline-primary btn-sm me-2">
+                                        <i class="fas fa-eye"></i> Ver Detalles
+                                    </button>
+                                    <button class="btn btn-outline-success btn-sm">
+                                        <i class="fas fa-edit"></i> Editar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Taller 3 -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card taller-card">
+                                <div class="card-header bg-warning text-dark">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h6 class="mb-0">
+                                            <i class="fas fa-palette me-2"></i>
+                                            Arte Terapéutico
+                                        </h6>
+                                        <span class="badge bg-secondary">En Planificación</span>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Expresión artística como herramienta de desarrollo personal y social.</p>
+                                    
+                                    <div class="taller-info mb-3">
+                                        <div class="info-item">
+                                            <i class="fas fa-calendar text-muted me-2"></i>
+                                            <span>Viernes</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-clock text-muted me-2"></i>
+                                            <span>14:00 - 16:00</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-users text-muted me-2"></i>
+                                            <span>8 participantes</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-user-tie text-muted me-2"></i>
+                                            <span>Instructora Ana López</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="progress mb-3">
+                                        <div class="progress-bar bg-warning" style="width: 25%"></div>
+                                    </div>
+                                    <small class="text-muted">Progreso del programa: 25%</small>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn btn-outline-primary btn-sm me-2">
+                                        <i class="fas fa-eye"></i> Ver Detalles
+                                    </button>
+                                    <button class="btn btn-outline-success btn-sm">
+                                        <i class="fas fa-edit"></i> Editar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Taller 4 -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card taller-card">
+                                <div class="card-header bg-info text-white">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h6 class="mb-0">
+                                            <i class="fas fa-comments me-2"></i>
+                                            Habilidades Sociales
+                                        </h6>
+                                        <span class="badge bg-light text-info">Activo</span>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Desarrollo de competencias sociales y comunicacionales para la vida diaria.</p>
+                                    
+                                    <div class="taller-info mb-3">
+                                        <div class="info-item">
+                                            <i class="fas fa-calendar text-muted me-2"></i>
+                                            <span>Lunes a Viernes</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-clock text-muted me-2"></i>
+                                            <span>11:00 - 12:00</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-users text-muted me-2"></i>
+                                            <span>10 participantes</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-user-tie text-muted me-2"></i>
+                                            <span>Psicóloga Laura Martín</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="progress mb-3">
+                                        <div class="progress-bar bg-info" style="width: 85%"></div>
+                                    </div>
+                                    <small class="text-muted">Progreso del programa: 85%</small>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn btn-outline-primary btn-sm me-2">
+                                        <i class="fas fa-eye"></i> Ver Detalles
+                                    </button>
+                                    <button class="btn btn-outline-success btn-sm">
+                                        <i class="fas fa-edit"></i> Editar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Taller 5 -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card taller-card">
+                                <div class="card-header bg-danger text-white">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h6 class="mb-0">
+                                            <i class="fas fa-music me-2"></i>
+                                            Música y Movimiento
+                                        </h6>
+                                        <span class="badge bg-light text-danger">Activo</span>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Expresión musical y corporal para el desarrollo de la coordinación y creatividad.</p>
+                                    
+                                    <div class="taller-info mb-3">
+                                        <div class="info-item">
+                                            <i class="fas fa-calendar text-muted me-2"></i>
+                                            <span>Miércoles y Viernes</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-clock text-muted me-2"></i>
+                                            <span>16:00 - 17:00</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-users text-muted me-2"></i>
+                                            <span>14 participantes</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-user-tie text-muted me-2"></i>
+                                            <span>Musicoterapeuta Pedro Silva</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="progress mb-3">
+                                        <div class="progress-bar bg-danger" style="width: 70%"></div>
+                                    </div>
+                                    <small class="text-muted">Progreso del programa: 70%</small>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn btn-outline-primary btn-sm me-2">
+                                        <i class="fas fa-eye"></i> Ver Detalles
+                                    </button>
+                                    <button class="btn btn-outline-success btn-sm">
+                                        <i class="fas fa-edit"></i> Editar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Taller 6 -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card taller-card">
+                                <div class="card-header bg-secondary text-white">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h6 class="mb-0">
+                                            <i class="fas fa-utensils me-2"></i>
+                                            Cocina Saludable
+                                        </h6>
+                                        <span class="badge bg-light text-secondary">Próximamente</span>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text">Aprendizaje de habilidades culinarias básicas y hábitos de alimentación saludable.</p>
+                                    
+                                    <div class="taller-info mb-3">
+                                        <div class="info-item">
+                                            <i class="fas fa-calendar text-muted me-2"></i>
+                                            <span>Sábados</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-clock text-muted me-2"></i>
+                                            <span>10:00 - 12:00</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-users text-muted me-2"></i>
+                                            <span>6 participantes</span>
+                                        </div>
+                                        <div class="info-item">
+                                            <i class="fas fa-user-tie text-muted me-2"></i>
+                                            <span>Chef Nutricionista Rosa Díaz</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="progress mb-3">
+                                        <div class="progress-bar bg-secondary" style="width: 5%"></div>
+                                    </div>
+                                    <small class="text-muted">Progreso del programa: 5%</small>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn btn-outline-primary btn-sm me-2">
+                                        <i class="fas fa-eye"></i> Ver Detalles
+                                    </button>
+                                    <button class="btn btn-outline-success btn-sm">
+                                        <i class="fas fa-edit"></i> Editar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Deportivos -->
+                <div class="tab-pane fade" id="deportivos">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="alert alert-info">
+                                <i class="fas fa-info-circle me-2"></i>
+                                Mostrando solo talleres deportivos. Total: 2 talleres activos.
+                            </div>
+                        </div>
+                        <!-- Aquí se mostrarían solo los talleres deportivos filtrados -->
+                    </div>
+                </div>
+                
+                <!-- Artísticos -->
+                <div class="tab-pane fade" id="artisticos">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="alert alert-warning">
+                                <i class="fas fa-palette me-2"></i>
+                                Mostrando solo talleres artísticos. Total: 2 talleres.
+                            </div>
+                        </div>
+                        <!-- Aquí se mostrarían solo los talleres artísticos filtrados -->
+                    </div>
+                </div>
+                
+                <!-- Habilidades Sociales -->
+                <div class="tab-pane fade" id="sociales">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="alert alert-success">
+                                <i class="fas fa-users me-2"></i>
+                                Mostrando solo talleres de habilidades sociales. Total: 1 taller activo.
+                            </div>
+                        </div>
+                        <!-- Aquí se mostrarían solo los talleres de habilidades sociales filtrados -->
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+    </div>
+    
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="static/js/main.js"></script>
+</body>
+</html>

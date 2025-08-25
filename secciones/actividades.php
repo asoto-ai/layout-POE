@@ -1,0 +1,198 @@
+<div class="content-header">
+    <h1 class="page-title">Registro de Actividades</h1>
+    <p class="page-subtitle">Seguimiento y documentación de entrenamientos y participaciones</p>
+</div>
+
+<!-- Formulario de registro -->
+<div class="row mb-4">
+    <div class="col-lg-8">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="card-title mb-0">
+                    <i class="fas fa-plus me-2"></i>
+                    Registrar Nueva Actividad
+                </h5>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Atleta</label>
+                            <select class="form-select">
+                                <option>Seleccionar atleta...</option>
+                                <option>María González - Natación</option>
+                                <option>Carlos Ruiz - Atletismo</option>
+                                <option>Ana López - Baloncesto</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Tipo de Actividad</label>
+                            <select class="form-select">
+                                <option>Seleccionar tipo...</option>
+                                <option>Entrenamiento</option>
+                                <option>Competencia</option>
+                                <option>Evaluación</option>
+                                <option>Taller</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Fecha</label>
+                            <input type="date" class="form-control">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Duración (minutos)</label>
+                            <input type="number" class="form-control" placeholder="60">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Descripción de la Actividad</label>
+                        <textarea class="form-control" rows="3" placeholder="Describe los ejercicios realizados, objetivos trabajados, observaciones..."></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Nivel de Participación</label>
+                            <select class="form-select">
+                                <option>Excelente</option>
+                                <option>Bueno</option>
+                                <option>Regular</option>
+                                <option>Necesita apoyo</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Entrenador/Instructor</label>
+                            <input type="text" class="form-control" placeholder="Nombre del responsable">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save me-2"></i>
+                        Guardar Registro
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Estadísticas rápidas -->
+    <div class="col-lg-4">
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <div class="stat-icon bg-primary me-3">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <div>
+                        <h4 class="mb-0">156</h4>
+                        <small class="text-muted">Actividades este mes</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <div class="stat-icon bg-success me-3">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div>
+                        <h4 class="mb-0">48</h4>
+                        <small class="text-muted">Atletas activos</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <div class="stat-icon bg-info me-3">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div>
+                        <h4 class="mb-0">2,340</h4>
+                        <small class="text-muted">Horas de entrenamiento</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Historial de actividades -->
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title mb-0">
+            <i class="fas fa-history me-2"></i>
+            Actividades Recientes
+        </h5>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Atleta</th>
+                        <th>Actividad</th>
+                        <th>Duración</th>
+                        <th>Participación</th>
+                        <th>Instructor</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>29/07/2024</td>
+                        <td>María González</td>
+                        <td><span class="badge bg-primary">Entrenamiento</span> Natación técnica</td>
+                        <td>90 min</td>
+                        <td><span class="badge bg-success">Excelente</span></td>
+                        <td>Coach López</td>
+                        <td>
+                            <button class="btn btn-outline-primary btn-sm me-1">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="btn btn-outline-warning btn-sm">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>28/07/2024</td>
+                        <td>Carlos Ruiz</td>
+                        <td><span class="badge bg-warning">Evaluación</span> Test de resistencia</td>
+                        <td>45 min</td>
+                        <td><span class="badge bg-info">Bueno</span></td>
+                        <td>Coach Martín</td>
+                        <td>
+                            <button class="btn btn-outline-primary btn-sm me-1">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="btn btn-outline-warning btn-sm">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>28/07/2024</td>
+                        <td>Ana López</td>
+                        <td><span class="badge bg-success">Competencia</span> Torneo Regional</td>
+                        <td>120 min</td>
+                        <td><span class="badge bg-success">Excelente</span></td>
+                        <td>Coach Silva</td>
+                        <td>
+                            <button class="btn btn-outline-primary btn-sm me-1">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="btn btn-outline-warning btn-sm">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

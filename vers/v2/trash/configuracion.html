@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración - Olimpiadas Especiales Chile</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://olimpiadasespecialeschile.net/favicon.png">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <nav id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-brand">
+                <img src="https://poe.olimpiadasespecialeschile.net/static/img/logoPoe2.png" style="height: 150px; vertical-align: middle;">
+            </div>
+        </div>
+        
+        <div class="sidebar-menu">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="fas fa-home"></i>
+                        <span>Página de inicio</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="informacion.html">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Información</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="talleres.html">
+                        <i class="fas fa-tools"></i>
+                        <span>Talleres</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="eventos.html">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Eventos</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="capacitaciones.html">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Capacitaciones</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="actividades.html">
+                        <i class="fas fa-clipboard-list"></i>
+                        <span>Registro de actividades</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="descargas.html">
+                        <i class="fas fa-download"></i>
+                        <span>Material descargable</span>
+                    </a>
+                </li>
+                <li class="nav-item mt-auto">
+                    <a class="nav-link active" href="configuracion.html">
+                        <i class="fas fa-cog"></i>
+                        <span>Configuración</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <div class="main-content">
+        <main class="content-area">
+            <div class="content-header">
+                <h1 class="page-title">Configuración</h1>
+                <p class="page-subtitle">Ajustes del sistema y preferencias personales</p>
+            </div>
+            
+            <!-- Perfil de Usuario -->
+            <div class="row mb-4">
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">
+                                <i class="fas fa-user me-2"></i>
+                                Perfil de Usuario
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Nombre Completo</label>
+                                        <input type="text" class="form-control" value="Usuario Administrador">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Email</label>
+                                        <input type="email" class="form-control" value="admin@olimpiadasespecialeschile.org">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Teléfono</label>
+                                        <input type="tel" class="form-control" value="+56 9 1234 5678">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Región</label>
+                                        <select class="form-select">
+                                            <option>Región Metropolitana</option>
+                                            <option>Valparaíso</option>
+                                            <option>Biobío</option>
+                                            <option>La Araucanía</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-save me-2"></i>
+                                    Guardar Cambios
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Foto de perfil -->
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="profile-avatar mb-3">
+                                <i class="fas fa-user-circle fa-5x text-muted"></i>
+                            </div>
+                            <h6>Foto de Perfil</h6>
+                            <p class="text-muted small">JPG, PNG o GIF. Máximo 2MB</p>
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="fas fa-upload me-1"></i>
+                                Subir Foto
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Configuración de Notificaciones -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">
+                                <i class="fas fa-bell me-2"></i>
+                                Notificaciones
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>Notificaciones por Email</h6>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="emailEventos" checked>
+                                        <label class="form-check-label" for="emailEventos">
+                                            Nuevos eventos y competencias
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="emailCapacitaciones" checked>
+                                        <label class="form-check-label" for="emailCapacitaciones">
+                                            Capacitaciones disponibles
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="emailResultados">
+                                        <label class="form-check-label" for="emailResultados">
+                                            Resultados de competencias
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>Notificaciones del Sistema</h6>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="systemAlerts" checked>
+                                        <label class="form-check-label" for="systemAlerts">
+                                            Alertas del sistema
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="systemUpdates">
+                                        <label class="form-check-label" for="systemUpdates">
+                                            Actualizaciones del portal
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="systemMaintenance" checked>
+                                        <label class="form-check-label" for="systemMaintenance">
+                                            Mantenimientos programados
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Configuración de Privacidad -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">
+                                <i class="fas fa-shield-alt me-2"></i>
+                                Privacidad y Seguridad
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>Cambiar Contraseña</h6>
+                                    <form>
+                                        <div class="mb-3">
+                                            <label class="form-label">Contraseña Actual</label>
+                                            <input type="password" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Nueva Contraseña</label>
+                                            <input type="password" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Confirmar Nueva Contraseña</label>
+                                            <input type="password" class="form-control">
+                                        </div>
+                                        <button type="submit" class="btn btn-warning btn-sm">
+                                            <i class="fas fa-key me-1"></i>
+                                            Cambiar Contraseña
+                                        </button>
+                                    </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>Configuración de Sesión</h6>
+                                    <div class="mb-3">
+                                        <label class="form-label">Tiempo de inactividad antes de cerrar sesión</label>
+                                        <select class="form-select">
+                                            <option>15 minutos</option>
+                                            <option selected>30 minutos</option>
+                                            <option>1 hora</option>
+                                            <option>2 horas</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-check mb-3">
+                                        <input class="form-check-input" type="checkbox" id="recordarSesion" checked>
+                                        <label class="form-check-label" for="recordarSesion">
+                                            Recordar mi sesión en este dispositivo
+                                        </label>
+                                    </div>
+                                    <button class="btn btn-danger btn-sm">
+                                        <i class="fas fa-sign-out-alt me-1"></i>
+                                        Cerrar Todas las Sesiones
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Configuración del Sistema -->
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">
+                                <i class="fas fa-cogs me-2"></i>
+                                Preferencias del Sistema
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label class="form-label">Idioma</label>
+                                <select class="form-select">
+                                    <option selected>Español (Chile)</option>
+                                    <option>English</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Zona Horaria</label>
+                                <select class="form-select">
+                                    <option selected>Chile/Continental (UTC-3)</option>
+                                    <option>Chile/EasterIsland (UTC-5)</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Formato de Fecha</label>
+                                <select class="form-select">
+                                    <option selected>DD/MM/YYYY</option>
+                                    <option>MM/DD/YYYY</option>
+                                    <option>YYYY-MM-DD</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title mb-0">
+                                <i class="fas fa-database me-2"></i>
+                                Datos y Almacenamiento
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="storage-info mb-3">
+                                <div class="d-flex justify-content-between">
+                                    <span>Espacio utilizado</span>
+                                    <span>2.4 GB de 10 GB</span>
+                                </div>
+                                <div class="progress mt-2">
+                                    <div class="progress-bar bg-info" style="width: 24%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <h6>Respaldo de Datos</h6>
+                                <p class="small text-muted">Último respaldo: 28 de Julio, 2024</p>
+                                <button class="btn btn-outline-primary btn-sm me-2">
+                                    <i class="fas fa-download me-1"></i>
+                                    Exportar Datos
+                                </button>
+                                <button class="btn btn-outline-success btn-sm">
+                                    <i class="fas fa-sync me-1"></i>
+                                    Sincronizar
+                                </button>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <h6>Limpiar Cache</h6>
+                                <p class="small text-muted">Liberar espacio eliminando archivos temporales</p>
+                                <button class="btn btn-outline-warning btn-sm">
+                                    <i class="fas fa-broom me-1"></i>
+                                    Limpiar Cache
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/main.js"></script>
+</body>
+</html>
