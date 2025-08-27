@@ -1,0 +1,19 @@
+[27-Aug-2025 15:53:07 America/New_York] PHP Warning:  Undefined array key "google_client_secret" in /home/olimpiadasespeci/public_html/plataformaOE/auth/google_callback.php on line 17
+[27-Aug-2025 15:53:57 America/New_York] PHP Warning:  Undefined array key "google_client_secret" in /home/olimpiadasespeci/public_html/plataformaOE/auth/google_callback.php on line 17
+[27-Aug-2025 15:56:11 America/New_York] PHP Warning:  Undefined array key "google_client_secret" in /home/olimpiadasespeci/public_html/plataformaOE/auth/google_callback.php on line 11
+[27-Aug-2025 16:01:50 America/New_York] PHP Warning:  Undefined array key "google_client_secret" in /home/olimpiadasespeci/public_html/plataformaOE/auth/debug_redirect.php on line 7
+[27-Aug-2025 16:48:30 America/New_York] PHP Warning:  require_once(/home/olimpiadasespeci/public_html/plataformaOE/auth/../conexion.php): Failed to open stream: No such file or directory in /home/olimpiadasespeci/public_html/plataformaOE/auth/google_callback.php on line 6
+[27-Aug-2025 16:48:30 America/New_York] PHP Fatal error:  Uncaught Error: Failed opening required '/home/olimpiadasespeci/public_html/plataformaOE/auth/../conexion.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/olimpiadasespeci/public_html/plataformaOE/auth/google_callback.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/auth/google_callback.php on line 6
+[27-Aug-2025 16:49:45 America/New_York] PHP Warning:  require_once(/home/olimpiadasespeci/public_html/plataformaOE/auth/../conexion.php): Failed to open stream: No such file or directory in /home/olimpiadasespeci/public_html/plataformaOE/auth/google_callback.php on line 6
+[27-Aug-2025 16:49:45 America/New_York] PHP Fatal error:  Uncaught Error: Failed opening required '/home/olimpiadasespeci/public_html/plataformaOE/auth/../conexion.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/olimpiadasespeci/public_html/plataformaOE/auth/google_callback.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/auth/google_callback.php on line 6
+[27-Aug-2025 16:51:05 America/New_York] PHP Warning:  require_once(/home/olimpiadasespeci/public_html/plataformaOE/auth/../conexion.php): Failed to open stream: No such file or directory in /home/olimpiadasespeci/public_html/plataformaOE/auth/google_callback.php on line 10
+[27-Aug-2025 16:51:05 America/New_York] PHP Fatal error:  Uncaught Error: Failed opening required '/home/olimpiadasespeci/public_html/plataformaOE/auth/../conexion.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/olimpiadasespeci/public_html/plataformaOE/auth/google_callback.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/auth/google_callback.php on line 10

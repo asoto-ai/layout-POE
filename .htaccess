@@ -1,0 +1,15 @@
+DirectoryIndex login.htm index.php index.html
+SetEnv GOOGLE_CLIENT_SECRET TU_CLIENT_SECRET
+
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # 🚨 Forzar que /auth/ quede siempre accesible
+  RewriteRule ^auth/ - [L]
+
+  # Bloquear vendor y config sensibles
+  RewriteRule ^vendor/ - [F,L]
+  RewriteRule ^config/secret\.php$ - [F,L]
+</IfModule>
