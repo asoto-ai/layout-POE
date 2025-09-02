@@ -24,19 +24,26 @@ if (!$user || !$user['is_active'] || !password_verify($pass, $user['password_has
 }
 
 $rolesStmt = $pdo->prepare("
-  SELECT r.code
+  SELECT r.code,r.name
   FROM user_roles ur
   JOIN roles r ON r.id = ur.role_id
   WHERE ur.user_id = ?
 ");
+
 $rolesStmt->execute([$user['id']]);
-$roles = $rolesStmt->fetchAll(PDO::FETCH_COLUMN);
+$role = $rolesStmt->fetch(PDO::FETCH_ASSOC); // 👈 ahora sí devuelve code y name
+
+$roleCode = $role['code'] ?? 'public';
+$roleName = $role['name'] ?? 'Público';
 
 $_SESSION['user'] = [
-  'id'    => (int)$user['id'],
-  'name'  => $user['name'],
-  'email' => $user['email'],
-  'roles' => $roles ?: []
+  'usuario_id'   => (int)$user['id'],
+  'nombre'       => $user['name'],
+  'correo'       => $user['email'],
+  'rol_codigo'   => $roleCode,
+  'rol_nombre'   => $roleName
 ];
 
+
 echo json_encode(['ok'=>true,'user'=>$_SESSION['user']]);
+

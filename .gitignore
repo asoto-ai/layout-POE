@@ -1,0 +1,30 @@
+# Dependencias de Composer
+/vendor/
+
+# Configuración sensible
+/config/app.php
+/config/db.php
+/config/secret.php
+*.json
+*.env
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs y temporales
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Cache
+/cache/
+/node_modules/
+/.idea/
+/.vscode/
+
+# Backups
+*.sql
+*.tar.gz
+*.zip

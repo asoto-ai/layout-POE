@@ -17,14 +17,15 @@ try {
 
     // Traer usuario y su rol
 $sql = "
-    SELECT 
-        u.id, u.name, u.email, u.password_hash, u.is_active,
-        COALESCE(r.code, 'public') AS role
-    FROM users u
-    LEFT JOIN user_roles ur ON ur.user_id = u.id
-    LEFT JOIN roles r ON r.id = ur.role_id
-    WHERE u.email = ?
-    LIMIT 1
+SELECT 
+    u.id, u.name, u.email, u.password_hash, u.is_active,
+    COALESCE(r.code, 'public') AS role,
+    COALESCE(r.name, 'Público') AS role_label
+FROM users u
+LEFT JOIN user_roles ur ON ur.user_id = u.id
+LEFT JOIN roles r ON r.id = ur.role_id
+WHERE u.email = ?
+LIMIT 1
 ";
 
     $stmt = $pdo->prepare($sql);
@@ -41,10 +42,11 @@ $sql = "
 
     // Guardar datos mínimos en sesión
     $_SESSION['user'] = [
-        'id'    => (int)$user['id'],
-        'name'  => $user['name'],
-        'email' => $user['email'],
-        'role'  => $user['role'] // admin | ally | public
+        'id'        => (int)$user['id'],
+        'name'      => $user['name'],
+        'email'     => $user['email'],
+        'role'      => $user['role'],      // code corto: admin | ally | public
+        'role_name' => $user['role_label'], // nombre bonito: Administrador / Aliado / Público
     ];
 
     echo json_encode(['ok' => true, 'user' => $_SESSION['user']]);

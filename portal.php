@@ -226,7 +226,8 @@
         if (data.ok) {
           if (topName)  topName.textContent  = data.user?.name  ?? "Usuario";
           if (topEmail) topEmail.textContent = data.user?.email ?? "Email";
-          if (topRole)  topRole.textContent  = roleLabel(data.user?.role);
+          //if (topRole)  topRole.textContent  = roleLabel(data.user?.role);
+          if (topRole)  topRole.textContent  = data.user?.role_name ?? "Público";
         } else {
           if (topName)  topName.textContent  = "Invitado";
           if (topEmail) topEmail.textContent = "";

@@ -43,44 +43,57 @@ try {
         }
     }
 
-    // Buscar usuario en BD
-    $sql = "SELECT u.id, u.name, u.email, r.code as role
-            FROM users u
-            LEFT JOIN user_roles ur ON ur.user_id = u.id
-            LEFT JOIN roles r ON r.id = ur.role_id
-            WHERE u.email = ?
-            LIMIT 1";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([$email]);
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+// Buscar usuario en BD
+$sql = "SELECT 
+            u.id, 
+            u.name, 
+            u.email, 
+            r.code AS role,
+            r.name AS role_label
+        FROM users u
+        LEFT JOIN user_roles ur ON ur.user_id = u.id
+        LEFT JOIN roles r ON r.id = ur.role_id
+        WHERE u.email = ?
+        LIMIT 1";
+$stmt = $pdo->prepare($sql);
+$stmt->execute([$email]);
+$user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if (!$user) {
-        // Crear usuario nuevo con rol "public" (id = 1 en roles)
-        $pdo->beginTransaction();
+if (!$user) {
+    // Crear usuario nuevo con rol "public" (id = 1 en roles)
+    $pdo->beginTransaction();
 
-        $stmt = $pdo->prepare("INSERT INTO users (name, email, password_hash, is_active) VALUES (?, ?, ?, 1)");
-        $stmt->execute([$name, $email, password_hash(bin2hex(random_bytes(8)), PASSWORD_BCRYPT)]);
-        $userId = $pdo->lastInsertId();
+    $stmt = $pdo->prepare("INSERT INTO users (name, email, password_hash, is_active) 
+                           VALUES (?, ?, ?, 1)");
+    $stmt->execute([$name, $email, password_hash(bin2hex(random_bytes(8)), PASSWORD_BCRYPT)]);
+    $userId = $pdo->lastInsertId();
 
-        $stmt = $pdo->prepare("INSERT INTO user_roles (user_id, role_id) VALUES (?, 1)");
-        $stmt->execute([$userId]);
+    $stmt = $pdo->prepare("INSERT INTO user_roles (user_id, role_id) VALUES (?, 1)");
+    $stmt->execute([$userId]);
 
-        $pdo->commit();
+    $pdo->commit();
 
-        $user = [
-            'id'    => $userId,
-            'name'  => $name,
-            'email' => $email,
-            'role'  => 'public'
-        ];
-    }
+    $user = [
+        'id'         => $userId,
+        'name'       => $name,
+        'email'      => $email,
+        'role'       => 'public',
+        'role_label' => 'Público'
+    ];
+}
 
-    // Crear sesión
-    $_SESSION['user'] = $user;
+// Crear sesión unificada
+$_SESSION['user'] = [
+    'id'        => (int)$user['id'],
+    'name'      => $user['name'],
+    'email'     => $user['email'],
+    'role'      => $user['role'] ?? 'public',
+    'role_name' => $user['role_label'] ?? 'Público'
+];
 
-    // Redirigir al portal
-    header("Location: ../portal.php");
-    exit;
+// Redirigir al portal
+header("Location: ../portal.php");
+exit;
 
 } catch (Exception $e) {
     die("❌ Error en callback: " . $e->getMessage());
