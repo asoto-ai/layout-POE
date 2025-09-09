@@ -1,0 +1,104 @@
+[08-Sep-2025 16:02:50 America/New_York] PHP Fatal error:  Uncaught Google\Service\Exception: {
+  "error": {
+    "code": 400,
+    "message": "Unable to parse range: Hoja1!A1:D10",
+    "errors": [
+      {
+        "message": "Unable to parse range: Hoja1!A1:D10",
+        "domain": "global",
+        "reason": "badRequest"
+      }
+    ],
+    "status": "INVALID_ARGUMENT"
+  }
+}
+ in /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Http/REST.php:134
+Stack trace:
+#0 /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Http/REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...')
+#1 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...')
+#2 /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Task/Runner.php(187): call_user_func_array(Array, Array)
+#3 /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Http/REST.php(66): Google\Task\Runner->run()
+#4 /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Client.php(967): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...', Array, NULL)
+#5 /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Service/Resource.php(248): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...')
+#6 /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient-services/src/Sheets/Resource/SpreadsheetsValues.php(251): Google\Service\Resource->call('get', Array, 'Google\\Service\\...')
+#7 /home/olimpiadasespeci/public_html/plataformaOE/test_sheets.php(19): Google\Service\Sheets\Resource\SpreadsheetsValues->get('1eP27eJjEcNfhwK...', 'Hoja1!A1:D10')
+#8 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Http/REST.php on line 134
+[08-Sep-2025 16:03:14 America/New_York] PHP Fatal error:  Uncaught Google\Service\Exception: {
+  "error": {
+    "code": 400,
+    "message": "Unable to parse range: Hoja1!A1:D10",
+    "errors": [
+      {
+        "message": "Unable to parse range: Hoja1!A1:D10",
+        "domain": "global",
+        "reason": "badRequest"
+      }
+    ],
+    "status": "INVALID_ARGUMENT"
+  }
+}
+ in /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Http/REST.php:134
+Stack trace:
+#0 /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Http/REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...')
+#1 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...')
+#2 /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Task/Runner.php(187): call_user_func_array(Array, Array)
+#3 /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Http/REST.php(66): Google\Task\Runner->run()
+#4 /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Client.php(967): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...', Array, NULL)
+#5 /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Service/Resource.php(248): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...')
+#6 /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient-services/src/Sheets/Resource/SpreadsheetsValues.php(251): Google\Service\Resource->call('get', Array, 'Google\\Service\\...')
+#7 /home/olimpiadasespeci/public_html/plataformaOE/test_sheets.php(19): Google\Service\Sheets\Resource\SpreadsheetsValues->get('1eP27eJjEcNfhwK...', 'Hoja1!A1:D10')
+#8 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Http/REST.php on line 134
+[08-Sep-2025 16:04:09 America/New_York] PHP Fatal error:  Uncaught Google\Service\Exception: {
+  "error": {
+    "code": 400,
+    "message": "Unable to parse range: Hoja1!A1:D10",
+    "errors": [
+      {
+        "message": "Unable to parse range: Hoja1!A1:D10",
+        "domain": "global",
+        "reason": "badRequest"
+      }
+    ],
+    "status": "INVALID_ARGUMENT"
+  }
+}
+ in /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Http/REST.php:134
+Stack trace:
+#0 /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Http/REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...')
+#1 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...')
+#2 /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Task/Runner.php(187): call_user_func_array(Array, Array)
+#3 /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Http/REST.php(66): Google\Task\Runner->run()
+#4 /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Client.php(967): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...', Array, NULL)
+#5 /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Service/Resource.php(248): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...')
+#6 /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient-services/src/Sheets/Resource/SpreadsheetsValues.php(251): Google\Service\Resource->call('get', Array, 'Google\\Service\\...')
+#7 /home/olimpiadasespeci/public_html/plataformaOE/test_sheets.php(22): Google\Service\Sheets\Resource\SpreadsheetsValues->get('1eP27eJjEcNfhwK...', 'Hoja1!A1:D10')
+#8 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Http/REST.php on line 134
+[08-Sep-2025 16:37:22 America/New_York] PHP Fatal error:  Uncaught Google\Service\Exception: {
+  "error": {
+    "code": 403,
+    "message": "The caller does not have permission",
+    "errors": [
+      {
+        "message": "The caller does not have permission",
+        "domain": "global",
+        "reason": "forbidden"
+      }
+    ],
+    "status": "PERMISSION_DENIED"
+  }
+}
+ in /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Http/REST.php:134
+Stack trace:
+#0 /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Http/REST.php(107): Google\Http\REST::decodeHttpResponse(Object(GuzzleHttp\Psr7\Response), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...')
+#1 [internal function]: Google\Http\REST::doExecute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...')
+#2 /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Task/Runner.php(187): call_user_func_array(Array, Array)
+#3 /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Http/REST.php(66): Google\Task\Runner->run()
+#4 /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Client.php(967): Google\Http\REST::execute(Object(GuzzleHttp\Client), Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...', Array, NULL)
+#5 /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Service/Resource.php(248): Google\Client->execute(Object(GuzzleHttp\Psr7\Request), 'Google\\Service\\...')
+#6 /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient-services/src/Sheets/Resource/SpreadsheetsValues.php(251): Google\Service\Resource->call('get', Array, 'Google\\Service\\...')
+#7 /home/olimpiadasespeci/public_html/plataformaOE/test_sheets.php(22): Google\Service\Sheets\Resource\SpreadsheetsValues->get('1NyUblF1gplvJJ-...', 'Hoja 1!A1:D10')
+#8 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Http/REST.php on line 134

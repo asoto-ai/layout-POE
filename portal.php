@@ -16,6 +16,10 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="static/css/style.css">
+
+    <!-- Icono -->
+    <link rel="icon" type="image/png" href="static/img/favicon.png">
+
 </head>
 <body>
     <!-- Sidebar Overlay for Mobile -->
@@ -38,6 +42,12 @@
                     <a class="nav-link active" href="#" data-section="inicio">
                         <i class="fas fa-home"></i>
                         <span>Página de inicio</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-section="informacionAliado">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Información Aliado</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -78,19 +88,6 @@
                 </li>
             </ul>
         </div>
-
-        <!--<div class="sidebar-footer">
-            <div class="user-info">
-                <div class="user-avatar">
-                    <i class="fas fa-user-circle"></i>
-                </div>
-                <div class="user-details">
-                    <div class="user-name">Usuario</div>
-                    <div class="user-email">Email</div>
-                    <div class="user-role">Role</div>
-                </div>
-            </div>
-        </div>-->
     </nav>
 
     <!-- Main Content -->
@@ -131,9 +128,9 @@
                         <i class="fas fa-envelope"></i>
                     </button>
                     <!-- Botón de logout -->
-<button id="logoutBtn" class="btn btn-outline-danger btn-sm" aria-label="Cerrar sesión">
-    <i class="fas fa-sign-out-alt"></i>
-</button>
+                    <button id="logoutBtn" class="btn btn-outline-danger btn-sm" aria-label="Cerrar sesión">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
 
                 </div>
             </div>

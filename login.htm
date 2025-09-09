@@ -151,6 +151,20 @@
         .loading { display: none; }
         .loading.show { display: inline-block; animation: spin 1s linear infinite; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        /* Centrar el recaptcha en el formulario */
+        .recaptcha-wrapper {
+        position: relative;
+        width: 100%;
+        height: 78px; /* altura estándar del recaptcha */
+        }
+
+        .g-recaptcha {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        }
+
     </style>
 </head>
 <body>
@@ -184,20 +198,31 @@
             <div class="divider"><span>o continúa con tu correo</span></div>
 
             <!-- Email Login Form -->
-            <form id="loginForm">
-                <div class="form-group">
-                    <label for="email" class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-control" id="email" placeholder="tu@correo.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="password" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="password" placeholder="••••••••" required>
-                </div>
-                <button type="submit" class="btn-login">
-                    <span class="button-text">Iniciar Sesión</span>
-                    <i class="fas fa-spinner loading"></i>
-                </button>
+            <form id="loginForm" method="POST">
+            <div class="form-group">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="tu@correo.com" required>
+            </div>
+            <div class="form-group">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" placeholder="••••••••" required>
+            </div>
+            
+            <!-- ✅ Casilla de reCAPTCHA v2 -->
+            <!-- reCAPTCHA centrado -->
+            <div class="recaptcha-wrapper">
+            <div class="g-recaptcha" data-sitekey="6LfW-bsrAAAAAEmBBqs6FNkEcu-AeMfXMmph7zOy"></div>
+            </div>
+
+
+            <button type="submit" class="btn-login">
+                <span class="button-text">Iniciar Sesión</span>
+                <i class="fas fa-spinner loading"></i>
+            </button>
             </form>
+
+            <!-- Script reCAPTCHA -->
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
             <div class="forgot-password"><a href="#" id="forgotPassword">¿Olvidaste tu contraseña?</a></div>
             <div class="register-link">¿No tienes cuenta? <a href="#" id="registerLink">Regístrate aquí</a></div>
@@ -244,15 +269,15 @@
                     throw new Error(data.error || 'Credenciales inválidas');
                 }
 
-// Redirección según rol
-const role = data.user?.role || 'public';
-if (role === 'admin') {
-    window.location.href = 'portal.php#admin';
-} else if (role === 'ally') {
-    window.location.href = 'portal.php#ally';
-} else {
-    window.location.href = 'portal.php';
-}
+                // Redirección según rol
+                const role = data.user?.role || 'public';
+                if (role === 'admin') {
+                    window.location.href = 'portal.php#admin';
+                } else if (role === 'ally') {
+                    window.location.href = 'portal.php#ally';
+                } else {
+                    window.location.href = 'portal.php';
+                }
 
 
             } catch (err) {
