@@ -102,3 +102,23 @@ Stack trace:
 #7 /home/olimpiadasespeci/public_html/plataformaOE/test_sheets.php(22): Google\Service\Sheets\Resource\SpreadsheetsValues->get('1NyUblF1gplvJJ-...', 'Hoja 1!A1:D10')
 #8 {main}
   thrown in /home/olimpiadasespeci/public_html/plataformaOE/vendor/google/apiclient/src/Http/REST.php on line 134
+[10-Sep-2025 15:17:26 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "DIR" in /home/olimpiadasespeci/public_html/plataformaOE/portal.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/portal.php on line 1
+[10-Sep-2025 15:17:31 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "DIR" in /home/olimpiadasespeci/public_html/plataformaOE/portal.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/portal.php on line 1
+[10-Sep-2025 15:17:31 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "DIR" in /home/olimpiadasespeci/public_html/plataformaOE/portal.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/portal.php on line 1
+[10-Sep-2025 15:17:32 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "DIR" in /home/olimpiadasespeci/public_html/plataformaOE/portal.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/portal.php on line 1
+[10-Sep-2025 15:19:01 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "DIR" in /home/olimpiadasespeci/public_html/plataformaOE/portal.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/portal.php on line 1

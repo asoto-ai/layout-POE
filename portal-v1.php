@@ -1,5 +1,3 @@
-<?php require_once __DIR__ . '/auth/check_access.php'; ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>

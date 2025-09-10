@@ -22,3 +22,5 @@ Stack trace:
 [02-Sep-2025 13:23:36 America/New_York] PHP Warning:  Undefined array key "role_name" in /home/olimpiadasespeci/public_html/plataformaOE/auth/login.php on line 49
 [02-Sep-2025 14:58:23 America/New_York] PHP Warning:  Undefined array key "role_name" in /home/olimpiadasespeci/public_html/plataformaOE/auth/login.php on line 49
 [02-Sep-2025 17:28:29 America/New_York] PHP Parse error:  syntax error, unexpected token "const" in /home/olimpiadasespeci/public_html/plataformaOE/auth/login.php on line 52
+[10-Sep-2025 15:03:32 America/New_York] PHP Parse error:  Unmatched '}' in /home/olimpiadasespeci/public_html/plataformaOE/auth/google_callback.php on line 112
+[10-Sep-2025 15:03:35 America/New_York] PHP Parse error:  Unmatched '}' in /home/olimpiadasespeci/public_html/plataformaOE/auth/google_callback.php on line 112

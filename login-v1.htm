@@ -271,16 +271,13 @@
 
                 // Redirección según rol
                 const role = data.user?.role || 'public';
-if (role === 'admin') {
-    window.location.href = 'portal.php#admin';
-} else if (role === 'ally') {
-    window.location.href = 'portal.php#ally';
-} else {
-    // 🚫 Mostrar modal de acceso denegado
-    const noAccessModal = new bootstrap.Modal(document.getElementById('noAccessModal'));
-    noAccessModal.show();
-}
-
+                if (role === 'admin') {
+                    window.location.href = 'portal.php#admin';
+                } else if (role === 'ally') {
+                    window.location.href = 'portal.php#ally';
+                } else {
+                    window.location.href = 'portal.php';
+                }
 
 
             } catch (err) {
@@ -298,33 +295,6 @@ if (role === 'admin') {
         document.getElementById('registerLink').addEventListener('click', (e) => {
             e.preventDefault(); alert('Registro de usuarios (pendiente).');
         });
-        // Mostrar modal si venimos desde Google con ?noaccess=1
-        document.addEventListener("DOMContentLoaded", () => {
-        const params = new URLSearchParams(window.location.search);
-        if (params.get("noaccess") === "1") {
-            const noAccessModal = new bootstrap.Modal(document.getElementById('noAccessModal'));
-            noAccessModal.show();
-        }
-        });
     </script>
-
-    <!-- Modal Acceso Denegado -->
-<div class="modal fade" id="noAccessModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content border-0 shadow-lg">
-      <div class="modal-header bg-danger text-white">
-        <h5 class="modal-title">🚫 Acceso denegado</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body text-center">
-        <p class="lead">Tu correo no está para ingresar a la plataforma.</p>
-      </div>
-      <div class="modal-footer">
-        <a href="login.htm" class="btn btn-secondary">Volver al inicio</a>
-      </div>
-    </div>
-  </div>
-</div>
-
 </body>
 </html>
