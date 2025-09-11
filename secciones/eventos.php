@@ -1,3 +1,8 @@
+<?php
+require_once __DIR__ . '/../auth/section_guard.php';
+validate_section_access('eventos', $pdo);
+?>
+
 <div class="content-header">
     <h1 class="page-title">Equipo</h1>
     <p class="page-subtitle">Miembros del equipo y organización</p>

@@ -1,3 +1,9 @@
+
+<?php
+require_once __DIR__ . '/../auth/section_guard.php';
+validate_section_access('talleres', $pdo);
+?>
+
 <div class="content-header">
     <h1 class="page-title">Proyectos</h1>
     <p class="page-subtitle">Gestión de proyectos y tareas</p>

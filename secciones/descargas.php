@@ -1,3 +1,8 @@
+<?php
+require_once __DIR__ . '/../auth/section_guard.php';
+validate_section_access('descargas', $pdo);
+?>
+
 <div class="content-header">
     <h1 class="page-title">Material Descargable</h1>
     <p class="page-subtitle">Recursos, manuales y documentos para entrenadores y familias</p>

@@ -1,3 +1,8 @@
+<?php
+require_once __DIR__ . '/../auth/section_guard.php';
+validate_section_access('actividades', $pdo);
+?>
+
 <div class="content-header">
     <h1 class="page-title">Registro de Actividades</h1>
     <p class="page-subtitle">Seguimiento y documentación de entrenamientos y participaciones</p>

@@ -1,0 +1,150 @@
+[10-Sep-2025 16:19:46 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php on line 9
+[10-Sep-2025 16:19:46 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php on line 9
+[10-Sep-2025 16:19:53 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/informacionAliado.php on line 9
+[10-Sep-2025 16:19:53 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/informacionAliado.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/informacionAliado.php on line 9
+[10-Sep-2025 16:19:55 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/talleres.php on line 9
+[10-Sep-2025 16:19:55 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/talleres.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/talleres.php on line 9
+[10-Sep-2025 16:19:57 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/eventos.php on line 9
+[10-Sep-2025 16:19:57 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/eventos.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/eventos.php on line 9
+[10-Sep-2025 16:19:58 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/capacitaciones.php on line 9
+[10-Sep-2025 16:19:58 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/capacitaciones.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/capacitaciones.php on line 9
+[10-Sep-2025 16:20:00 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/actividades.php on line 9
+[10-Sep-2025 16:20:00 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/actividades.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/actividades.php on line 9
+[10-Sep-2025 16:20:02 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/descargas.php on line 9
+[10-Sep-2025 16:20:02 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/descargas.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/descargas.php on line 9
+[10-Sep-2025 16:20:03 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/settings.php on line 9
+[10-Sep-2025 16:20:03 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/settings.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/settings.php on line 9
+[10-Sep-2025 16:20:04 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php on line 9
+[10-Sep-2025 16:20:04 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php on line 9
+[10-Sep-2025 16:21:33 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php on line 9
+[10-Sep-2025 16:21:33 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php on line 9
+[10-Sep-2025 16:21:35 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php on line 9
+[10-Sep-2025 16:21:35 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php on line 9
+[10-Sep-2025 16:21:42 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php on line 9
+[10-Sep-2025 16:21:42 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php on line 9
+[10-Sep-2025 16:21:43 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/informacionAliado.php on line 9
+[10-Sep-2025 16:21:43 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/informacionAliado.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/informacionAliado.php on line 9
+[10-Sep-2025 16:21:44 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/talleres.php on line 9
+[10-Sep-2025 16:21:44 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/talleres.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/talleres.php on line 9
+[10-Sep-2025 16:21:45 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/eventos.php on line 9
+[10-Sep-2025 16:21:45 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/eventos.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/eventos.php on line 9
+[10-Sep-2025 16:21:47 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/capacitaciones.php on line 9
+[10-Sep-2025 16:21:47 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/capacitaciones.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/capacitaciones.php on line 9
+[10-Sep-2025 16:21:48 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/actividades.php on line 9
+[10-Sep-2025 16:21:48 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/actividades.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/actividades.php on line 9
+[10-Sep-2025 16:21:49 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/descargas.php on line 9
+[10-Sep-2025 16:21:49 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/descargas.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/descargas.php on line 9
+[10-Sep-2025 16:21:50 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/settings.php on line 9
+[10-Sep-2025 16:21:50 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/settings.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/settings.php on line 9
+[10-Sep-2025 16:21:51 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php on line 9
+[10-Sep-2025 16:21:51 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php on line 9
+[10-Sep-2025 16:23:58 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php on line 7
+[10-Sep-2025 16:23:58 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php on line 7
+[10-Sep-2025 16:29:09 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php on line 7
+[10-Sep-2025 16:29:09 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php on line 7
+[10-Sep-2025 16:29:11 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php on line 7
+[10-Sep-2025 16:29:11 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php on line 7
+[10-Sep-2025 16:29:12 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/informacionAliado.php on line 9
+[10-Sep-2025 16:29:12 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/informacionAliado.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/informacionAliado.php on line 9
+[10-Sep-2025 16:29:13 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/talleres.php on line 9
+[10-Sep-2025 16:29:13 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/talleres.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/talleres.php on line 9
+[10-Sep-2025 16:29:14 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/eventos.php on line 9
+[10-Sep-2025 16:29:14 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/eventos.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/eventos.php on line 9
+[10-Sep-2025 16:29:15 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/capacitaciones.php on line 9
+[10-Sep-2025 16:29:15 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/capacitaciones.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/capacitaciones.php on line 9
+[10-Sep-2025 16:29:16 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/actividades.php on line 9
+[10-Sep-2025 16:29:16 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/actividades.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/actividades.php on line 9
+[10-Sep-2025 16:29:17 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php on line 7
+[10-Sep-2025 16:29:17 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/inicio.php on line 7
+[10-Sep-2025 16:30:25 America/New_York] PHP Warning:  Undefined variable $pdo in /home/olimpiadasespeci/public_html/plataformaOE/secciones/informacionAliado.php on line 9
+[10-Sep-2025 16:30:25 America/New_York] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/olimpiadasespeci/public_html/plataformaOE/secciones/informacionAliado.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/olimpiadasespeci/public_html/plataformaOE/secciones/informacionAliado.php on line 9

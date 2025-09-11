@@ -1,3 +1,8 @@
+<?php
+require_once __DIR__ . '/../auth/section_guard.php';
+validate_section_access('settings', $pdo);
+?>
+
 <div class="content-header">
     <h1 class="page-title">Configuración</h1>
     <p class="page-subtitle">Ajustes del sistema y preferencias personales</p>

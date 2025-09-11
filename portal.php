@@ -172,7 +172,7 @@
       })
       .catch(error => {
         document.getElementById("content").innerHTML =
-          `<div class="alert alert-danger">No se pudo cargar la sección ${section}</div>`;
+          `<div class="alert alert-danger">Usted no tiene acceso a esta sección</div>`;
         console.error(error);
       });
   }

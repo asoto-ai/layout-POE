@@ -1,4 +1,8 @@
-<?php // /public_html/plataformaOE/secciones/inicio.php ?>
+<?php
+require_once __DIR__ . '/../auth/section_guard.php';
+validate_section_access('inicio', $pdo);
+?>
+
 <div class="content-header">
     <h1 class="page-title">Inicio</h1>
     <p class="page-subtitle">Transformamos vidas a través del deporte</p>

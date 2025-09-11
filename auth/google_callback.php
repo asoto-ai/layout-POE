@@ -43,13 +43,14 @@ try {
         }
     }
 
-    // Buscar usuario en BD
+    // Buscar usuario en BD (ahora con role_id)
     $sql = "SELECT 
                 u.id, 
                 u.name, 
                 u.email, 
-                r.code AS role,
-                r.name AS role_label
+                COALESCE(r.id, 1)   AS role_id,
+                COALESCE(r.code, 'public') AS role,
+                COALESCE(r.name, 'Público') AS role_label
             FROM users u
             LEFT JOIN user_roles ur ON ur.user_id = u.id
             LEFT JOIN roles r ON r.id = ur.role_id
@@ -77,6 +78,7 @@ try {
             'id'         => $userId,
             'name'       => $name,
             'email'      => $email,
+            'role_id'    => 1,
             'role'       => 'public',
             'role_label' => 'Público'
         ];
@@ -88,6 +90,7 @@ try {
         'name'      => $user['name'],
         'email'     => $user['email'],
         'role'      => $user['role'] ?? 'public',
+        'role_id'   => (int)($user['role_id'] ?? 1),   // 👈 agregado
         'role_name' => $user['role_label'] ?? 'Público'
     ];
 

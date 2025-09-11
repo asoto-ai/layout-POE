@@ -2,23 +2,17 @@
 // auth/check_access.php
 session_start();
 
-// 🚫 Si no hay usuario en sesión → al login
+// Si no hay sesión, redirige al login
 if (!isset($_SESSION['user'])) {
     header("Location: ../login.htm");
     exit;
 }
 
+// Rol del usuario en sesión
 $role = $_SESSION['user']['role'] ?? 'public';
 
-// 🚫 Si es público → bloqueamos
+// 🚫 Bloquear público de inmediato
 if ($role === 'public') {
     header("Location: ../login.htm?noaccess=1");
     exit;
 }
-
-// ⚡ Ejemplo de control por rol
-// Solo admin entra a ciertas páginas
-// if ($role !== 'admin') {
-//     header("Location: ../login.htm?noaccess=1");
-//     exit;
-// }
