@@ -9,7 +9,7 @@ y versionado semántico [SemVer](https://semver.org/lang/es/).
 ## [0.2.0] - 2025-09-17
 ### Added
 - Incorporación de **mapas interactivos con Leaflet** en la plataforma.
-- Tag paralelo: `v7-mapas-interactivos`.
+- Tag paralelo: `v7-mapas-interactivos`. 
 
 ---
 
