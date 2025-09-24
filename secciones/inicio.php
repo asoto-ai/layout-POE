@@ -1,134 +1,143 @@
 <?php
 require_once __DIR__ . '/../auth/section_guard.php';
 validate_section_access('inicio', $pdo);
+
+session_start();
+$user = $_SESSION['user'] ?? null;
 ?>
 
 <div class="content-header">
-    <h1 class="page-title">Inicio</h1>
-    <p class="page-subtitle">Transformamos vidas a través del deporte</p>
+    <h1 class="page-title">Tus Alianzas Institucionales</h1>
+
+    <?php if ($user): ?>
+
+        <?php
+        // === KPIs resumen ===
+        $kpiStmt = $pdo->prepare("
+            SELECT ecn.descripcion AS estado_convenio, COUNT(*) AS total
+            FROM user_instituciones ui
+            JOIN instituciones i ON i.id_institucion = ui.institucion_id
+            LEFT JOIN estado_convenio ecn ON ecn.id_estado_convenio = i.id_estado_convenio
+            WHERE ui.user_id = ?
+            GROUP BY ecn.descripcion
+        ");
+        $kpiStmt->execute([$user['id']]);
+        $kpis = $kpiStmt->fetchAll(PDO::FETCH_KEY_PAIR);
+
+        $map = [
+            'Activo' => ['color' => 'success', 'icon' => 'fa-check-circle'],
+            'En proceso de firma' => ['color' => 'warning', 'icon' => 'fa-file-signature'],
+            'Sin respuesta' => ['color' => 'secondary', 'icon' => 'fa-envelope-open-text'],
+            'Pausado' => ['color' => 'dark', 'icon' => 'fa-pause-circle'],
+            'Sin avances' => ['color' => 'secondary', 'icon' => 'fa-hourglass-half'],
+            'Vencido' => ['color' => 'danger', 'icon' => 'fa-times-circle']
+        ];
+        ?>
+
+<!-- KPIs -->
+<div class="row row-cols-<?= count($kpis) ?> g-3 mt-3 text-center">
+    <?php foreach ($kpis as $estado => $total): 
+        $conf = $map[$estado] ?? ['color' => 'secondary', 'icon' => 'fa-circle'];
+    ?>
+        <div class="col d-flex">
+            <div class="card shadow-sm border-0 w-100 h-100">
+                <div class="card-body d-flex flex-column justify-content-center">
+                    <i class="fas <?= $conf['icon'] ?> text-<?= $conf['color'] ?> fa-2x mb-2"></i>
+                    <h4 class="mb-0 text-<?= $conf['color'] ?>"><?= $total ?></h4>
+                    <small class="text-muted"><?= htmlspecialchars($estado) ?></small>
+                </div>
+            </div>
+        </div>
+    <?php endforeach; ?>
 </div>
 
-<div class="row mb-4">
-    <div class="col-lg-3 col-md-6 mb-3">
-        <div class="stat-card">
-            <div class="stat-icon bg-primary">
-                <i class="fas fa-users"></i>
-            </div>
-            <div class="stat-content">
-                <h3>248</h3>
-                <p>Atletas Participando</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6 mb-3">
-        <div class="stat-card">
-            <div class="stat-icon bg-success">
-                <i class="fas fa-project-diagram"></i>
-            </div>
-            <div class="stat-content">
-                <h3>42</h3>
-                <p>Programas Inclusivos</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6 mb-3">
-        <div class="stat-card">
-            <div class="stat-icon bg-warning">
-                <i class="fas fa-tasks"></i>
-            </div>
-            <div class="stat-content">
-                <h3>156</h3>
-                <p>Entrenamientos</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6 mb-3">
-        <div class="stat-card">
-            <div class="stat-icon bg-info">
-                <i class="fas fa-file-alt"></i>
-            </div>
-            <div class="stat-content">
-                <h3>1,240</h3>
-                <p>Recursos Educativos</p>
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="row">
-    <div class="col-lg-8 mb-4">
-        <div class="card">
-            <div class="card-header">
-                <h5 class="card-title">Actividad Reciente</h5>
-            </div>
+
+        <!-- Grilla de instituciones -->
+        <div class="card mt-3">
             <div class="card-body">
-                <div class="activity-item">
-                    <div class="activity-icon bg-primary">
-                        <i class="fas fa-plus"></i>
-                    </div>
-                    <div class="activity-content">
-                        <p><strong>Nuevo proyecto creado:</strong> Sistema de Gestión</p>
-                        <small class="text-muted">Hace 2 horas</small>
-                    </div>
-                </div>
-                <div class="activity-item">
-                    <div class="activity-icon bg-success">
-                        <i class="fas fa-check"></i>
-                    </div>
-                    <div class="activity-content">
-                        <p><strong>Tarea completada:</strong> Revisión de código</p>
-                        <small class="text-muted">Hace 4 horas</small>
-                    </div>
-                </div>
-                <div class="activity-item">
-                    <div class="activity-icon bg-info">
-                        <i class="fas fa-upload"></i>
-                    </div>
-                    <div class="activity-content">
-                        <p><strong>Documento subido:</strong> Manual de usuario</p>
-                        <small class="text-muted">Hace 6 horas</small>
-                    </div>
-                </div>
+                <table id="institucionesTable" class="table table-striped table-bordered datatable" style="width:100%;">
+                    <thead class="table-light">
+                        <tr>
+                            <th>ID</th>
+                            <th>Institución</th>
+                            <th>Tipo</th>
+                            <th>Convenio</th>
+                            <th>Estado Contacto</th>
+                            <th>Estado Convenio</th>
+                            <th>Comuna</th>
+                            <th>Fecha Asociación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        try {
+                            $stmt = $pdo->prepare("
+                                SELECT 
+                                    i.id_institucion,
+                                    i.nombre_institucion,
+                                    ti.descripcion AS tipo_institucion,
+                                    tc.descripcion AS convenio,
+                                    ec.descripcion AS estado_contacto,
+                                    ecn.descripcion AS estado_convenio,
+                                    c.comuna,
+                                    ui.fecha_asociacion
+                                FROM user_instituciones ui
+                                JOIN instituciones i ON i.id_institucion = ui.institucion_id
+                                LEFT JOIN tipo_institucion ti ON ti.id_tipo_institucion = i.id_tipo_institucion
+                                LEFT JOIN tipo_convenios tc ON tc.id_convenio = i.id_convenio
+                                LEFT JOIN estado_contacto ec ON ec.id_estado_contacto = i.id_estado_contacto
+                                LEFT JOIN estado_convenio ecn ON ecn.id_estado_convenio = i.id_estado_convenio
+                                LEFT JOIN comuna c ON c.cod_comuna = i.cod_comuna
+                                WHERE ui.user_id = ?
+                                ORDER BY i.id_institucion
+                            ");
+                            $stmt->execute([$user['id']]);
+                            $instituciones = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                            function renderBadge($texto) {
+                                $map = [
+                                    'Activo' => 'success',
+                                    'En proceso de firma' => 'warning',
+                                    'Sin respuesta' => 'secondary',
+                                    'Pausado' => 'dark',
+                                    'Sin avances' => 'secondary',
+                                    'Vencido' => 'danger',
+                                    'Hecho' => 'success',
+                                    'Pendiente' => 'warning'
+                                ];
+                                $color = $map[$texto] ?? 'secondary';
+                                return $texto ? "<span class='badge bg-{$color}'>".htmlspecialchars($texto)."</span>" : '';
+                            }
+
+                            if ($instituciones) {
+                                foreach ($instituciones as $inst) {
+                                    echo "<tr>
+                                            <td>".htmlspecialchars($inst['id_institucion'])."</td>
+                                            <td>".htmlspecialchars($inst['nombre_institucion'])."</td>
+                                            <td>".htmlspecialchars($inst['tipo_institucion'] ?? '')."</td>
+                                            <td>".htmlspecialchars($inst['convenio'] ?? '')."</td>
+                                            <td>".renderBadge($inst['estado_contacto'] ?? '')."</td>
+                                            <td>".renderBadge($inst['estado_convenio'] ?? '')."</td>
+                                            <td>".htmlspecialchars($inst['comuna'] ?? '')."</td>
+                                            <td>".htmlspecialchars($inst['fecha_asociacion'] ?? '')."</td>
+                                          </tr>";
+                                }
+                            } else {
+                                echo "<tr><td colspan='8' class='text-center'>No hay instituciones asociadas</td></tr>";
+                            }
+                        } catch (Exception $e) {
+                            echo "<tr><td colspan='8' class='text-danger text-center'>Error al cargar: ".htmlspecialchars($e->getMessage())."</td></tr>";
+                        }
+                        ?>
+                    </tbody>
+                </table>
             </div>
         </div>
-    </div>
-    <div class="col-lg-4 mb-4">
-        <div class="card">
-            <div class="card-header">
-                <h5 class="card-title">Próximas Reuniones</h5>
-            </div>
-            <div class="card-body">
-                <div class="meeting-item">
-                    <div class="meeting-time">
-                        <span class="time">10:00</span>
-                        <span class="date">Hoy</span>
-                    </div>
-                    <div class="meeting-details">
-                        <h6>Reunión de Equipo</h6>
-                        <p class="text-muted">Sala de conferencias A</p>
-                    </div>
-                </div>
-                <div class="meeting-item">
-                    <div class="meeting-time">
-                        <span class="time">14:30</span>
-                        <span class="date">Hoy</span>
-                    </div>
-                    <div class="meeting-details">
-                        <h6>Revisión de Proyecto</h6>
-                        <p class="text-muted">Virtual</p>
-                    </div>
-                </div>
-                <div class="meeting-item">
-                    <div class="meeting-time">
-                        <span class="time">09:00</span>
-                        <span class="date">Mañana</span>
-                    </div>
-                    <div class="meeting-details">
-                        <h6>Presentación Cliente</h6>
-                        <p class="text-muted">Sala de conferencias B</p>
-                    </div>
-                </div>
-            </div>
+
+    <?php else: ?>
+        <div class="alert alert-warning mt-3">
+            No hay usuario logueado en la sesión.
         </div>
-    </div>
+    <?php endif; ?>
 </div>
